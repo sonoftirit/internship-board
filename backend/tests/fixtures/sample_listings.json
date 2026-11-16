@@ -1,0 +1,63 @@
+[
+  {
+    "id": "good-1",
+    "source": "Simplify",
+    "category": "Software",
+    "company_name": "Microsoft",
+    "title": "Software Engineer Intern",
+    "active": true,
+    "is_visible": true,
+    "terms": ["Summer 2027"],
+    "date_posted": 1794268800,
+    "date_updated": 1794364791,
+    "url": "https://careers.microsoft.com/job/1",
+    "locations": ["Redmond, WA"],
+    "sponsorship": "Offers Sponsorship",
+    "degrees": ["Bachelor's"]
+  },
+  {
+    "id": "good-2",
+    "source": "Simplify",
+    "category": "Data Science",
+    "company_name": "  Amazon  ",
+    "title": "Data Science Intern",
+    "active": false,
+    "is_visible": true,
+    "terms": ["Summer 2027"],
+    "date_posted": 1794000000,
+    "url": "https://amazon.jobs/job/2",
+    "locations": ["Seattle, WA", "Remote"]
+  },
+  {
+    "id": "hidden-1",
+    "source": "Simplify",
+    "company_name": "Hidden Co",
+    "title": "Intern",
+    "is_visible": false,
+    "date_posted": 1794000000,
+    "url": "https://example.com/hidden"
+  },
+  {
+    "id": "bad-no-url",
+    "source": "Simplify",
+    "company_name": "No Link Inc",
+    "title": "Intern",
+    "date_posted": 1794000000
+  },
+  {
+    "id": "bad-url",
+    "source": "Simplify",
+    "company_name": "Email Only LLC",
+    "title": "Intern",
+    "date_posted": 1794000000,
+    "url": "mailto:jobs@example.com"
+  },
+  {
+    "id": "bad-blank-title",
+    "source": "Simplify",
+    "company_name": "Blank Title Corp",
+    "title": "   ",
+    "date_posted": 1794000000,
+    "url": "https://example.com/blank"
+  }
+]
