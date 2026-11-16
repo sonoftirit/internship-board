@@ -34,3 +34,23 @@ class Listing(BaseModel):
         if not value.startswith(("http://", "https://")):
             raise ValueError("must start with http:// or https://")
         return value
+
+
+class Job(BaseModel):
+    """A job as the API sends it to the dashboard: only the fields the UI needs."""
+
+    id: str
+    company_name: str
+    title: str
+    category: str | None
+    locations: list[str]
+    url: str
+    sponsorship: str | None
+    date_posted: datetime
+
+
+class JobsPage(BaseModel):
+    """One page of results plus the total, so the UI can show "1,234 jobs" and "Load more"."""
+
+    total: int
+    items: list[Job]
