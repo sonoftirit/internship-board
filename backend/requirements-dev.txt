@@ -1,0 +1,5 @@
+# Extra tools only developers (and CI) need — NOT the production server.
+-r requirements.txt
+pytest==9.2.0   # runs our automated tests
+httpx==0.28.1   # needed by FastAPI's TestClient to call our API in tests
+ruff==0.17.5    # linter: catches bugs and style problems

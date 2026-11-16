@@ -1,0 +1,19 @@
+# --- Secrets: NEVER commit these ---
+.env
+*.env.local
+
+# --- Python ---
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# --- JavaScript / React ---
+node_modules/
+dist/
+
+# --- OS / editor junk ---
+.DS_Store
+.vscode/
+.claude/

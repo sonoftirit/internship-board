@@ -1,0 +1,8 @@
+# Libraries the app needs to RUN (installed on the server too).
+# Exact versions (==) so every machine runs the same code.
+fastapi==0.163.1            # web framework for our API
+uvicorn[standard]==0.54.0   # the server program that runs FastAPI
+psycopg[binary]==3.3.9      # talks to PostgreSQL
+pydantic==2.14.3            # validates data shapes
+requests==2.34.2            # downloads the job listings over HTTP
+python-dotenv==1.2.4        # loads secrets from the .env file
