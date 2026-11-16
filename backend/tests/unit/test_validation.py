@@ -29,16 +29,42 @@ def test_company_name_is_trimmed(raw_listings):
 def test_rejects_non_web_url():
     with pytest.raises(ValidationError):
         Listing.model_validate(
-            {"id": "x", "source": "s", "company_name": "C", "title": "T",
-             "date_posted": 0, "url": "mailto:jobs@example.com"}
+            {
+                "id": "x",
+                "source": "s",
+                "company_name": "C",
+                "title": "T",
+                "date_posted": 0,
+                "url": "mailto:jobs@example.com",
+            }
         )
 
 
 def test_rejects_blank_title():
     with pytest.raises(ValidationError):
         Listing.model_validate(
-            {"id": "x", "source": "s", "company_name": "C", "title": "   ",
-             "date_posted": 0, "url": "https://example.com"}
+            {
+                "id": "x",
+                "source": "s",
+                "company_name": "C",
+                "title": "   ",
+                "date_posted": 0,
+                "url": "https://example.com",
+            }
+        )
+
+
+def test_rejects_blank_company_name():
+    with pytest.raises(ValidationError):
+        Listing.model_validate(
+            {
+                "id": "x",
+                "source": "s",
+                "company_name": " ",
+                "title": "SWE",
+                "date_posted": 0,
+                "url": "https://example.com",
+            }
         )
 
 
